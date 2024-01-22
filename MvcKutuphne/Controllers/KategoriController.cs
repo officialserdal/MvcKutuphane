@@ -27,10 +27,10 @@ namespace MvcKutuphne.Controllers
             db.SaveChanges();
             return View();
         }
-       
+
         public ActionResult KategoriSil(int id)
         {
-            var kategori=db.TBLKATEGORI.Find(id);
+            var kategori = db.TBLKATEGORI.Find(id);
             db.TBLKATEGORI.Remove(kategori);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -40,7 +40,17 @@ namespace MvcKutuphne.Controllers
             var ktg = db.TBLKATEGORI.Find(id);
             return View("KategoriGetir", ktg);
 
-            
+
+        }
+        public ActionResult KategoriGüncelle(TBLKATEGORI p)
+        {
+            var ktg = db.TBLKATEGORI.Find(p.ID);
+            ktg.AD = p.AD;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+
         }
     }
 }

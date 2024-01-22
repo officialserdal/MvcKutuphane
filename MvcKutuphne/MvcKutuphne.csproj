@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KirapController.cs" />
+    <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,6 +237,10 @@
     <Content Include="Views\Kategori\Kategoriekle.cshtml" />
     <Content Include="Views\Kategori\KategoriSil.cshtml" />
     <Content Include="Views\Kategori\KategoriGetir.cshtml" />
+    <Content Include="Views\Yazar\Index.cshtml">
+      <BrowseToURL>~/Yazar/Index2</BrowseToURL>
+    </Content>
+    <Content Include="Views\Yazar\YazarEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
