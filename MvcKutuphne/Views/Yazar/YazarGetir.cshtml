@@ -1,0 +1,28 @@
+﻿@model MvcKutuphne.Models.Entity.YAZAR
+
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Yazar", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(y => y.ID)
+        @Html.TextBoxFor(y => y.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(y => y.AD)
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+
+    </div>
+
+
+}
+
+
+
+

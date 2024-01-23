@@ -13,16 +13,20 @@
         <th>AD</th>
         <th>SOYAD</th>
         <th>DETAY</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
     </tr>
     @foreach (var x in Model)
     {
-        <tr>
-            <td>@x.ID</td>
-            <td>@x.AD</td>
-            <td>@x.SOYAD</td>
-            <td>@x.DETAY</td>
+<tr>
+    <td>@x.ID</td>
+    <td>@x.AD</td>
+    <td>@x.SOYAD</td>
+    <td>@x.DETAY</td>
+    <td><a href="c#" class="btn btn-success">Güncelle</a>
+    <td>@Html.ActionLink("SİL", "YazarSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek istiyor musunuz?');" })</td>
 
-        </tr>
+</tr>
     }
 </table>
 <a class="btn btn-primary" href="/Yazar/YazarEkle/">Yeni Yazar Ekle</a>

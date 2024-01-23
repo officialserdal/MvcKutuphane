@@ -241,6 +241,7 @@
       <BrowseToURL>~/Yazar/Index2</BrowseToURL>
     </Content>
     <Content Include="Views\Yazar\YazarEkle.cshtml" />
+    <Content Include="Views\Yazar\YazarGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
