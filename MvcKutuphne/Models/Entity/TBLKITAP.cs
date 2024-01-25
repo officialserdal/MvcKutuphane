@@ -27,6 +27,7 @@ namespace MvcKutuphne.Models.Entity
         public string BASIMYIL { get; set; }
         public string YAYINEVI { get; set; }
         public string SAYFA { get; set; }
+        public Nullable<bool> DURUM { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLHAREKET> TBLHAREKET { get; set; }

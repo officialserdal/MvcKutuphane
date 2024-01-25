@@ -46,6 +46,7 @@ namespace MvcKutuphne.Controllers
         public ActionResult YazarGuncelle(YAZAR tbl)
         {
             var yzr = db.YAZAR.Find(tbl.ID);
+            yzr.ID = tbl.ID;
             yzr.AD = tbl.AD;
             yzr.SOYAD = tbl.SOYAD;
             db.SaveChanges();

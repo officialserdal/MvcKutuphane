@@ -1,0 +1,33 @@
+﻿@using MvcKutuphne.Models.Entity
+@model List<TBLKITAP>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<h2>KİTAP SAYFASI</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kitap Adı</th>
+        <th>Kategorisi</th>
+        <th>Basım Yılı</th>
+        <th>Kitap Yazarı</th>
+        <th>Yayın Evi</th>
+        <th>Sayfa</th>
+        <th>Durum</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.KATEGORI</td>
+            <td>@x.BASIMYIL</td>
+            <td>@x.YAZAR</td>
+            <td>@x.YAYINEVI</td>
+            <td>@x.SAYFA</td>
+            <td>@x.DURUM</td>
+         
+        </tr>
+    }
+</table>

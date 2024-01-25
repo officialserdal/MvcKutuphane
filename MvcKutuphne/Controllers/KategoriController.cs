@@ -40,7 +40,7 @@ namespace MvcKutuphne.Controllers
             var ktg = db.TBLKATEGORI.Find(id);
             return View("KategoriGetir", ktg);
 
-
+           
         }
         public ActionResult KategoriGüncelle(TBLKATEGORI p)
         {
