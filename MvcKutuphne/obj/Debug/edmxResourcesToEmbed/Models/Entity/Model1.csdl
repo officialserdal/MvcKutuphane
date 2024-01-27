@@ -68,6 +68,7 @@
     <NavigationProperty Name="TBLHAREKET" Relationship="Self.FK_TBLHAREKET_TBLKITAP" FromRole="TBLKITAP" ToRole="TBLHAREKET" />
     <NavigationProperty Name="TBLKATEGORI" Relationship="Self.FK_TBLKITAP_TBLKATEGORI" FromRole="TBLKITAP" ToRole="TBLKATEGORI" />
     <NavigationProperty Name="YAZAR1" Relationship="Self.FK_TBLKITAP_YAZAR" FromRole="TBLKITAP" ToRole="YAZAR" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
   <EntityType Name="TBLPERSONEL">
     <Key>
