@@ -29,14 +29,29 @@ namespace MvcKutuphne.Controllers
                                            }).ToList();
 
             ViewBag.dgr1 = deger1;
+
+            List<SelectListItem> deger2 = (from i in db.YAZAR.ToList()
+                                           select new SelectListItem
+                                           {
+
+                                               Text = i.AD + ' '+ i.SOYAD, 
+                                               Value = i.ID.ToString()
+                                           }).ToList();
+
+            ViewBag.dgr2 = deger2;
             return View();
         }
         [HttpPost]
-        public ActionResult KitapEkle(TBLKITAP k)
+        public ActionResult KitapEkle(TBLKITAP p)
         {
-            db.TBLKITAP.Add(k);
+            var ktg = db.TBLKATEGORI.Where(k => k.ID == p.TBLKATEGORI.ID).FirstOrDefault();
+            var yzr = db.YAZAR.Where(k => k.ID == p.YAZAR1.ID).FirstOrDefault();
+            p.TBLKATEGORI = ktg;
+            p.YAZAR1 =yzr;
+            db.TBLKITAP.Add(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+         
         }
     }
 }
