@@ -15,18 +15,18 @@
     <div></div>
     <div style="margin-top:15px">
         <label>Kitap Kategori</label>
-        @Html.DropDownListFor(k => k.KATEGORI, (List<SelectListItem>)ViewBag.dgr1, "Lütfen bir kategori seçiniz", new { @class = "form-control" })
+        @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.dgr1, "Lütfen bir kategori seçiniz", new { @class = "form-control" })
 
     </div>
     <div></div>
     <div style="margin-top:15px">
         <label>Basım Yılı</label>
-        @Html.TextBoxFor(k => k.YAZAR, new { @class = "form-control" })
+        @Html.TextBoxFor(k => k.BASIMYIL, new { @class = "form-control" })
     </div>
     <div></div>
     <div style="margin-top:15px">
         <label> Kitap Yazarı</label>
-        @Html.DropDownListFor(k => k.YAZAR, (List<SelectListItem>)ViewBag.dgr2, "Lütfen bir yazar seçiniz", new { @class = "form-control" })
+        @Html.DropDownListFor(k => k.YAZAR1.ID, (List<SelectListItem>)ViewBag.dgr2, "Lütfen bir yazar seçiniz", new { @class = "form-control" })
 
     </div>
     <div></div>

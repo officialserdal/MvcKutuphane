@@ -26,7 +26,7 @@ namespace MvcKutuphne.Controllers
         {
             db.YAZAR.Add(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
 
         }
         public ActionResult YazarSil(int id)
