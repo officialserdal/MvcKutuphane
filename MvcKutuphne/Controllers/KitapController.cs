@@ -87,5 +87,22 @@ namespace MvcKutuphne.Controllers
             return View("KitapGetir", ktb);
 
         }
+        public ActionResult KitapGuncelle(TBLKITAP p)
+        {
+            var kitap = db.TBLKITAP.Find(p.ID);
+            kitap.AD = p.AD;
+            kitap.BASIMYIL = p.BASIMYIL;
+            kitap.SAYFA = p.SAYFA;
+            kitap.YAYINEVI = p.YAYINEVI;
+            var ktg = db.TBLKATEGORI.Where(k => k.ID == p.TBLKATEGORI.ID).FirstOrDefault();
+            var yzr = db.YAZAR.Where(y => y.ID == p.YAZAR1.ID).FirstOrDefault();
+            kitap.KATEGORI = ktg.ID;
+            kitap.YAZAR = yzr.ID;
+            db.SaveChanges();
+           return RedirectToAction("Index");
+
+
+
+        }
     }
 }
