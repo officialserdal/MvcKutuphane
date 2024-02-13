@@ -1,0 +1,39 @@
+﻿@using MvcKutuphne.Models.Entity
+@model List<TBLUYELER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>ÜYELER</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ÜYE ID</th>
+        <th>ÜYE ADI</th>
+        <th>ÜYE SOYADI</th>
+        <th>MAİL</th>
+        <th>KULLANICI ADI</th>
+        <th>ŞİFRESİ</th>
+        <th>TELEFON</th>
+        <th>OKUL</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.SOYAD</td>
+            <td>@x.MAIL</td>
+            <td>@x.KULANICIADI</td>
+            <td>@x.SIFRE</td>
+            <td>@x.TELEFON</td>
+            <td>@x.OKUL</td>
+            <td><a href="/Uye/UyeGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
+            <td>@Html.ActionLink("SİL", "UyeSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek istiyor musunuz?');" })</td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Uye/UyeEkle/">Yeni Üye Ekle</a>
+

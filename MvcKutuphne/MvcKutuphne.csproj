@@ -131,6 +131,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KitapController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,10 +247,15 @@
     <Content Include="Views\Kitap\Index.cshtml" />
     <Content Include="Views\Kitap\KitapEkle.cshtml" />
     <Content Include="Views\Kitap\KitapGetir.cshtml" />
+    <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\Personelekle.cshtml" />
+    <Content Include="Views\Personel\PersonelGetir.cshtml" />
+    <Content Include="Views\Uye\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Kirap\" />
+    <Folder Include="Views\Üyeler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

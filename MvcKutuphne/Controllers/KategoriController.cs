@@ -25,7 +25,7 @@ namespace MvcKutuphne.Controllers
         {
             db.TBLKATEGORI.Add(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
 
         public ActionResult KategoriSil(int id)

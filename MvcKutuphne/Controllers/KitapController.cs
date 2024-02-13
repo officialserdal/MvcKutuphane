@@ -11,10 +11,16 @@ namespace MvcKutuphne.Controllers
     {
         DBkutuphaneEntities db = new DBkutuphaneEntities();
         // GET: Kitap
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var kitaplar = db.TBLKITAP.ToList();
-            return View(kitaplar);
+            //var kitaplar = db.TBLKITAP.ToList();
+            var kitaplar = from k in db.TBLKITAP select k;
+            if (!string.IsNullOrEmpty(p))
+            {
+                kitaplar=kitaplar.Where(m=>m.AD.Contains(p));
+                
+            }
+            return View(kitaplar.ToList());
         }
         [HttpGet]
         public ActionResult KitapEkle()

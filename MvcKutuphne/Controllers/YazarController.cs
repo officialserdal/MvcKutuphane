@@ -51,8 +51,6 @@ namespace MvcKutuphne.Controllers
             yzr.SOYAD = tbl.SOYAD;
             db.SaveChanges();
             return RedirectToAction("Index");
-
-
         }
     }
 }
